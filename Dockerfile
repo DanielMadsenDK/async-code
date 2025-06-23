@@ -23,7 +23,7 @@ RUN npm install
 # Copy the rest of the application code
 COPY async-code-web/ .
 
-# Copy the setup script
+# Copy the setup script (overwrite the empty one from async-code-web)
 COPY setup.sh ./setup.sh
 
 # Make the setup script executable
@@ -33,4 +33,4 @@ RUN chmod +x ./setup.sh
 EXPOSE 3000
 
 # Set the default command to run setup.sh
-CMD ["/bin/bash", "./setup.sh"]
+CMD ["/bin/bash", "./setup.sh"] 
