@@ -12,7 +12,6 @@ services:
     volumes:
       - ./async-code-web:/app
       - /app/node_modules
-      - ./setup.sh:/app/setup.sh
     depends_on:
       - backend
 
