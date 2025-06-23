@@ -11,7 +11,6 @@ services:
       - NODE_ENV=development
     volumes:
       - ./async-code-web:/app
-      - ./setup.sh:/app/setup.sh
       - /app/node_modules
     depends_on:
       - backend
