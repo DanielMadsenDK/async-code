@@ -20,11 +20,11 @@ COPY async-code-web/package*.json ./
 # Install Node.js dependencies
 RUN npm install
 
-# Copy the rest of the application code
-COPY async-code-web/ .
-
 # Copy the setup script (overwrite the empty one from async-code-web)
 COPY setup.sh ./setup.sh
+
+# Copy the rest of the application code
+COPY async-code-web/ .
 
 # Make the setup script executable
 RUN chmod +x ./setup.sh
